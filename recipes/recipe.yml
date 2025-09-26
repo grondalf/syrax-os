@@ -47,4 +47,13 @@ modules:
           - io.github.kolunmi.Bazaar
       - scope: user
 
+  - type: systemd
+    system:
+      enabled:
+        - bootc-fetch-apply-updates.timer
+        - tailscaled.service
+      disabled:
+        - NetworkManager-wait-online.service
+        - rpm-ostreed-automatic.timer
+
   - type: signing # this sets up policy for signing files
