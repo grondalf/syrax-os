@@ -45,6 +45,16 @@ modules:
           - org.mozilla.firefox
           - org.gnome.Loupe
           - io.github.kolunmi.Bazaar
+          - com.heroicgameslauncher.hgl
+          - com.spotify.Client
+          - com.rtosta.zapzap
+          - io.github.fabrialberio.pinapp
+          - page.tesk.Refine
+          - com.github.tchx84.Flatseal
+          - com.mattjakeman.ExtensionManager
+        remove:
+          - org.gnome.Extensions
+          - io.github.vikdevelop.SaveDesktop
       - scope: user
 
   - type: systemd
