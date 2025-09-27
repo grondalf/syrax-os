@@ -30,7 +30,6 @@ modules:
         - firefox-langpacks
         - htop
         - nvtop
-        - gnome-software
         
   - type: script
     scripts:
