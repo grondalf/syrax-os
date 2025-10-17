@@ -24,6 +24,9 @@ modules:
         destination: /usr/bin/
 
   - type: dnf
+    install:
+      packages:
+        - tailscale
     remove:
       packages:
         - firefox
@@ -59,7 +62,18 @@ modules:
     system:
       enabled:
         - bootc-fetch-apply-updates.timer
+        - tailscaled.service
       disabled:
         - NetworkManager-wait-online.service
+
+  - type: gnome-extensions
+    install:
+      - 615   # AppIndicator and KStatusNotifierItem Support
+      - 4158  # Gnome 4x UI Improvements
+      - 3956  # GNOME Fuzzy App Search
+      - 1319  # GSConnect
+      - 7     # Removable Drive Menu
+      - 3193  # Blur my Shell
+      - 6139  # Tailscale QS
 
   - type: signing # this sets up policy for signing files
