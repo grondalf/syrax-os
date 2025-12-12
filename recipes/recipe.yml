@@ -14,10 +14,6 @@ image-version: 42 # or latest
 modules:
   - type: files
     files:
-      - source: system/common/bootc-service-override
-        destination: /etc/systemd/system/bootc-fetch-apply-updates.service.d/
-      - source: system/common/bootc-service-timer-override
-        destination: /etc/systemd/system/bootc-fetch-apply-updates.timer.d/
       - source: system/kargs
         destination: /usr/lib/bootc/kargs.d/
       - source: system/bin
